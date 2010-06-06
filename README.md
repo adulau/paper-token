@@ -25,8 +25,7 @@ that sheet of paper.
 An OTP is just an one-time password and this recommendation makes a
 lot of sense for the paper-based token too :
 
-"Simply, people can no longer remember passwords good enough to reliably defend against dictionary attacks, and are much more secure if they choose a password too complicated to remember and then write it down. We're all good at securing small pieces of paper. I recommend that people write their passwords down on a small piece of paper, and keep it with their other valuable small pieces of paper: in their wallet.
-    —Bruce Schneier 2005"
+"Simply, people can no longer remember passwords good enough to reliably defend against dictionary attacks, and are much more secure if they choose a password too complicated to remember and then write it down. We're all good at securing small pieces of paper. I recommend that people write their passwords down on a small piece of paper, and keep it with their other valuable small pieces of paper: in their wallet. —Bruce Schneier 2005"
 
 perl requirements
 -----------------
