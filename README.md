@@ -1,7 +1,33 @@
 paper token
 ===========
 
-paper token is a PDF generator to create paper-based OTP token.
+paper token is a PDF generator to create paper-based OTP (RFC 4226) token.
+
+why?
+----
+
+Hardware tokens are very costly and often require a proprietary infrastructure.
+(near impossible to find HOTP-compatible hardware token without 
+requiring the linked proprietary infrastructure)
+Software tokens can be also painful and always require a second device like
+a phone to operate properly.
+
+security?
+---------
+
+Paper is not less secure than an phone running a software token. With
+a sheet paper and a pencil, you have the control of the token. Do you
+have the control of your phone and the software running on it? 
+
+For a negligible cost, you have a token and you just need to protect
+that sheet of paper.
+
+An OTP is just an one-time password and this recommendation makes a
+lot of sense for the paper-based token too :
+
+``Simply, people can no longer remember passwords good enough to reliably defend against dictionary attacks, and are much more secure if they choose a password too complicated to remember and then write it down. We're all good at securing small pieces of paper. I recommend that people write their passwords down on a small piece of paper, and keep it with their other valuable small pieces of paper: in their wallet.
+    —Bruce Schneier 2005``
+ 
 
 perl requirements
 -----------------
@@ -16,10 +42,20 @@ how to use it
 
 perl paper-token.pl  --output test.pdf --counter 0 --end 200 --secret 3132333435363738393031323334353637383930 --digits 6
 
+sample token (PDF)
+==================
+
+* [Sample token using test vector from RFC 4226](http://github.com/adulau/paper-token/raw/master/examples/test.pdf)
+
 OpenOTP server installation
 ===========================
+You have various free software solution to run
+on the server side for the authentication of the
+tokens. You can have a look at the setting up
+of an OpenOTP server to work with those paper-based
+token.
 
-* For more information - http://www.foo.be/cgi-bin/wiki.pl/SettingOOTP
+* [For more information](http://www.foo.be/cgi-bin/wiki.pl/SettingOOTP)
 
 LICENSE
 =======
