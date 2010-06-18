@@ -15,12 +15,12 @@ a phone to operate properly.
 security?
 ---------
 
-Paper is not less secure than an phone running a software token. With
+Paper is not less secure than a phone running a software token. With
 a sheet paper and a pencil, you have the control of the token. Do you
 have the control of your phone and the software running on it? 
 
 For a negligible cost, you have a token and you just need to protect
-that sheet of paper.
+that sheet of paper. It's simple.
 
 An OTP is just an one-time password and this recommendation makes a
 lot of sense for the paper-based token too :
@@ -39,6 +39,18 @@ how to use it
 =============
 
 perl paper-token.pl  --output test.pdf --counter 0 --end 200 --secret 3132333435363738393031323334353637383930 --digits 6
+
+paper token - http://www.foo.be/paper-token/ v0.1
+usage: paper-token.pl [options] 
+options                                                                            
+-h, --help      This help message                                                  
+-s, --secret    Secret of the token in hex format - default is RFC 4226 test vector
+-o, --output    Output filename                                                    
+-c, --counter   Starting counter - default is 0                                    
+-e, --end       Ending counter - default is 500                                    
+-w, --window    Window of authentication (one line) - default is 14                
+-d, --digits    Digits showed per OTP value - default is 6 - dec31.6               
+    --man       Display documentation     
 
 sample token (PDF)
 ==================
